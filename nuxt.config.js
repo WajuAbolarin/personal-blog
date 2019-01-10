@@ -6,7 +6,7 @@ require('dotenv').config()
 const apiUrl = process.env.SANITY_API_URL
 
 module.exports = {
-  mode: 'universal',
+  mode: 'spa',
   // mode: 'universal',
 
   /*

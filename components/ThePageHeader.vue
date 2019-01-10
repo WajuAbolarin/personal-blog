@@ -9,7 +9,7 @@
               <div class="header-pic-ring post-header-pic-ring"></div>
           </nuxt-link >
       </div>
-      <ul class="ml-auto nav justify-content-center align-items-baseline ">
+      <ul class="ml-md-auto nav justify-content-center align-items-baseline ">
           <li class="nav-item active">
               <nuxt-link class="nav-link" to="/">Blog</nuxt-link>
           </li>
