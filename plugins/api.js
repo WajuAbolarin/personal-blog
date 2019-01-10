@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import Sanity from '~/helpers/api'
 
 console.log(process.env)
