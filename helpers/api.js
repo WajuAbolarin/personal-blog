@@ -1,4 +1,3 @@
-
 import sanityClient from '@sanity/client'
 import blocksToHTML from "@sanity/block-content-to-html"
 
@@ -46,10 +45,10 @@ const queries = {
 }
 
 class Sanity{
-  constructor(){
+  constructor(projectId, dataset){
     this.client = sanityClient({
-      projectId: process.env.SANITY_PROJECT_ID,
-      dataset: process.env.SANITY_DATA_SET,
+      projectId,
+      dataset,
       useCdn: true
     });
   }
