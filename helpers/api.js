@@ -1,3 +1,4 @@
+require('dotenv').config()
 import sanityClient from '@sanity/client'
 import blocksToHTML from "@sanity/block-content-to-html"
 
