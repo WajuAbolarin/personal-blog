@@ -1,13 +1,12 @@
+require('dotenv').config()
 const pkg = require('./package')
 const axios = require('axios')
-const api = require('./helpers/api')
-require('dotenv').config()
 
 const apiUrl = process.env.SANITY_API_URL
 
 module.exports = {
-  // mode: 'spa',
-  mode: 'universal',
+  mode: 'spa',
+  // mode: 'universal',
 
   /*
   ** Headers of the page
