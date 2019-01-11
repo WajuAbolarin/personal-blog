@@ -1,12 +1,12 @@
 <template>
    <header>
     <nav
-    class="d-block mb-5 p-3 py-auto shadow-sm d-flex flex-column flex-md-row justify-content-baseline bg-light border-bottom post-nav"
+    class="d-block mb-5 p-3 py-auto shadow-sm d-flex flex-column flex-md-row justify-content-baseline border-bottom post-nav"
     >
-      <div class="post-header-photo mx-auto mb-5 mx-md-0 mb-md-0 ">
+      <div class="post-header-photo mx-auto mb-2 mx-md-0 mb-md-0 ">
           <nuxt-link  to="/" class="d-block ">
-              <img class="rounded-circle post-header-pic header-pic border-white" src="~/assets/images/me.png" alt="Abolarin Olanrewaju Olabode">
-              <div class="header-pic-ring post-header-pic-ring"></div>
+              <img class="rounded-circle post-header-pic header-pic border-white" src="~/static/apple-icon.png" alt="Abolarin Olanrewaju Olabode">
+              <!-- <div class="header-pic-ring post-header-pic-ring"></div> -->
           </nuxt-link >
       </div>
       <ul class="ml-md-auto nav justify-content-center align-items-baseline ">
@@ -38,6 +38,9 @@ export default {
 }
 </script>
 
-<style>
-
+<style soped>
+  nav{
+    /* background: rgba(239, 240, 241, 0.904); */
+    background: rgba(239, 240, 241, 0.104);
+  }
 </style>

@@ -1,7 +1,10 @@
-import Sanity from '~/helpers/api'
+import Sanity from "~/helpers/api";
+// import {MockApi} from "~/helpers/mockapi";
 
-console.log(process.env)
+
 export default (ctx, inject) => {
-  inject('api', () => new Sanity('11y83f9z', 'production'))
+  // console.log(ctx)
+  inject("api", () => new Sanity("11y83f9z", "production"));
+  // inject("api", () => new MockApi());
 }
 

@@ -3,6 +3,7 @@
     <home-header/>
     <nuxt/>
     <the-footer/>
+    <hr>
   </main>
 </template>
 

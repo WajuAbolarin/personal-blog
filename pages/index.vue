@@ -14,14 +14,13 @@
       </div>
       <hr>
     </section>
-
   </div>
 </template>
 
 <script>
 import PostList from '~/components/ThePostList'
-
 export default {
+  layout: 'page',
   components: {PostList},
   asyncData (ctx) {
    return  ctx.app
