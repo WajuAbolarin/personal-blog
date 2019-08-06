@@ -46,7 +46,7 @@ const queries = {
 class Sanity {
   constructor(projectId, dataset) {
     this.projectId = projectId;
-    this.dataset - dataset;
+    this.dataset = dataset;
 
     this.client = sanityClient({
       projectId,
@@ -68,6 +68,7 @@ class Sanity {
           )
       }
     };
+
     const body = blocksToHTML({
       blocks: post.body,
       projectId: this.projectId,
