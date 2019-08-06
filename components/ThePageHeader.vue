@@ -22,7 +22,7 @@
               </a>
           </li>
           <li class="nav-item ">
-              <a class="nav-link" href="https://gitub.com/WajuAbolarin" target="_blank">
+              <a class="nav-link" href="https://github.com/WajuAbolarin" target="_blank">
                   <i class="fab fa-github"></i>
               </a>
           </li>
