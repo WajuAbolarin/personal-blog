@@ -116,11 +116,6 @@ module.exports = {
         });
     }
   },
-  sitemap: {
-    path: "/sitemap.xml",
-    hostname: "https://olanrewaju.com.ng",
-    generate: false // Enable me when using nuxt generate
-  },
 
   /*
    ** Customize the progress-bar color
@@ -142,7 +137,7 @@ module.exports = {
    */
   modules: ["@nuxtjs/dotenv", "@nuxtjs/google-analytics", "@nuxtjs/sitemap"],
   googleAnalytics: {
-    id: "UA-145243170-1"
+    id: process.env.GA_ID
   },
   /*
    ** Build configuration
