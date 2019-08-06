@@ -5,7 +5,7 @@ const axios = require("axios");
 const apiUrl = process.env.SANITY_API_URL;
 
 module.exports = {
-  mode: "universal",
+  mode: "spa",
 
   /*
    ** Headers of the page
