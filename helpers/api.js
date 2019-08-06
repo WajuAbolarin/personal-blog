@@ -1,5 +1,5 @@
-import sanityClient from '@sanity/client'
-import blocksToHTML from "@sanity/block-content-to-html"
+import sanityClient from "@sanity/client";
+import blocksToHTML from "@sanity/block-content-to-html";
 
 const queries = {
   post: `*[_type == "post" && slug.current == $slug]{
@@ -29,8 +29,7 @@ const queries = {
       'tags': tags[]->title,
       publishedAt,
       'mainImage':mainImage.asset->url
-} | order(publishedAt desc)`
-,
+} | order(publishedAt desc)`,
   tagPosts: `*[_type == 'tag' && title == $tag]{
       'tag':title,
       description,
@@ -42,10 +41,13 @@ const queries = {
         publishedAt,
       }
     }`
-}
+};
 
-class Sanity{
-  constructor(projectId, dataset){
+class Sanity {
+  constructor(projectId, dataset) {
+    this.projectId = projectId;
+    this.dataset - dataset;
+
     this.client = sanityClient({
       projectId,
       dataset,
@@ -53,45 +55,39 @@ class Sanity{
     });
   }
 
-  async getPost(slug){
-
+  async getPost(slug) {
     let [post] = await this.client.fetch(queries.post, { slug });
-    const h = blocksToHTML.h
+    const h = blocksToHTML.h;
     const serializers = {
       types: {
-        code: props => (
-          h('pre', { className: props.node.language },
-            h('code', props.node.code)
+        code: props =>
+          h(
+            "pre",
+            { className: props.node.language },
+            h("code", props.node.code)
           )
-        )
       }
-    }
+    };
     const body = blocksToHTML({
       blocks: post.body,
-      projectId: "11y83f9z",
-      dataset: "production",
+      projectId: this.projectId,
+      dataset: this.dataset,
       serializers
-    })
+    });
 
-    post = Object.assign({}, post, { body })
-  return {post} ;
+    post = Object.assign({}, post, { body });
+    return { post };
   }
 
-   getPosts(){
-    return this.client
-      .fetch(queries.allPosts)
-      .then( posts => {
-        return {posts}
-      })
+  getPosts() {
+    return this.client.fetch(queries.allPosts).then(posts => {
+      return { posts };
+    });
   }
 
-  async tagPosts(tag){
-    return await this.client.fetch(queries.tagPosts, { tag })
+  async tagPosts(tag) {
+    return await this.client.fetch(queries.tagPosts, { tag });
   }
-
 }
 
-export default Sanity
-
-
-
+export default Sanity;
