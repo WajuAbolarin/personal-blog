@@ -135,7 +135,7 @@ module.exports = {
   /*
    ** Nuxt.js modules
    */
-  modules: ["@nuxtjs/dotenv", "@nuxtjs/google-analytics", "@nuxtjs/sitemap"],
+  modules: ["@nuxtjs/dotenv", "@nuxtjs/google-analytics"],
   googleAnalytics: {
     id: process.env.GA_ID
   },
