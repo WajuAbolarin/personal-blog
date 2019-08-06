@@ -1,11 +1,9 @@
-const sanityClient = require('@sanity/client')
+const sanityClient = require("@sanity/client");
 
 const client = sanityClient({
-  projectId: '11y83f9z',
-  dataset: 'production',
-  // token: '',
+  projectId: process.env.SANITY_PROJECT_ID,
+  dataset: process.env.SANITY_DATA_SET,
   useCdn: true
-})
+});
 
-module.exports = getData
-
+module.exports = getData;
