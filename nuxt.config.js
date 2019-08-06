@@ -140,8 +140,10 @@ module.exports = {
   /*
    ** Nuxt.js modules
    */
-  modules: ["@nuxtjs/dotenv", "@nuxtjs/sitemap"],
-
+  modules: ["@nuxtjs/dotenv", "@nuxtjs/google-analytics", "@nuxtjs/sitemap"],
+  googleAnalytics: {
+    id: "UA-145243170-1"
+  },
   /*
    ** Build configuration
    */
