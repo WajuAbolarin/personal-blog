@@ -38,7 +38,7 @@
         <!-- Article -->
         <article class="col-xs-12 col-md-8 mt-2 mt-md-0">
           <div v-html="post.body"></div>
-          <div
+          <!-- <div
             class="col-md-12 py-5 mt-4 d-none d-md-flex justify-content-between"
           >
             <nuxt-link
@@ -49,7 +49,7 @@
               to="/"
               class="btn btn-outline-secondary btn-md"
             >Next Post &rarr;</nuxt-link>
-          </div>
+          </div>-->
         </article>
       </div>
     </section>
