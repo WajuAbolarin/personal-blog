@@ -137,7 +137,7 @@ module.exports = {
    */
   modules: ["@nuxtjs/dotenv", "@nuxtjs/google-analytics"],
   googleAnalytics: {
-    id: process.env.GA_ID
+    id: 'UA-145243170'
   },
   /*
    ** Build configuration
